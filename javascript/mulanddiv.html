@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication and Division Calculator</title>
+    <script>
+        function multiplyNumbers() {
+            // Get the values from the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+
+            // Calculate multiplication
+            let result = num1 * num2;
+
+            // Display the result
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+
+        function divideNumbers() {
+            // Get the values from the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+
+            // Check for division by zero
+            if (num2 === 0) {
+                document.getElementById('result').innerText = 'Result: Division by zero is not allowed';
+                return;
+            }
+
+            // Calculate division
+            let result = num1 / num2;
+
+            // Display the result
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Multiplication and Division Calculator</h2>
+    <form onsubmit="event.preventDefault();">
+        <label for="num1">1st number:</label>
+        <input type="number" id="num1" value="10" required><br><br>
+        
+        <label for="num2">2nd number:</label>
+        <input type="number" id="num2" value="12" required><br><br>
+        
+        <button type="button" onclick="multiplyNumbers()">Multiply</button>
+        <button type="button" onclick="divideNumbers()">Divide</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="result">Result: </p>
+</body>
+</html>

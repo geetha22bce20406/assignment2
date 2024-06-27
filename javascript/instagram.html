@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .login-box {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 300px;
+            margin-bottom: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .login-box h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .login-box input[type="text"], .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #3897f0;
+            color: white;
+            font-size: 14px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .remember-me {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .remember-me input {
+            margin-right: 5px;
+        }
+        .forgot-password {
+            color: #3897f0;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .signup-text {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .signup-text a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Instagram</h1>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <div class="remember-me">
+            <label>
+                <input type="checkbox" id="remember-me"> Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <button onclick="login()">Log In</button>
+    </div>
+    <div class="signup-text">
+        Don't have an account? <a href="#">Sign up</a>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('remember-me').checked;
+
+            // Here you can add your logic for login functionality
+            console.log('Username:', username);
+            console.log('Password:', password);
+            console.log('Remember me:', rememberMe);
+
+            // Example: Display an alert
+            alert(Logging in as ${username});
+        }
+    </script>
+</body>
+</html>

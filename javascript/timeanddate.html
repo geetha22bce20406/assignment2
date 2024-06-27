@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time Display</title>
+    <script>
+        function showDate() {
+            // Get the current date
+            let currentDate = new Date().toLocaleDateString();
+            
+            // Display the date below the button
+            document.getElementById('dateResult').innerText = 'Date: ' + currentDate;
+        }
+
+        function showTime() {
+            // Get the current time
+            let currentTime = new Date().toLocaleTimeString();
+            
+            // Display the time below the button
+            document.getElementById('timeResult').innerText = 'Time: ' + currentTime;
+        }
+    </script>
+</head>
+<body>
+    <h2>Date and Time Display</h2>
+    
+    <button type="button" onclick="showDate()">Show Date</button>
+    <p id="dateResult">Date will be shown here</p>
+    <br>
+    
+    <button type="button" onclick="showTime()">Show Time</button>
+    <p id="timeResult">Time will be shown here</p>
+    <br>
+</body>
+</html>

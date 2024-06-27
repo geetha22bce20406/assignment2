@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Forms Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-label {
+      color: red;
+    }
+    .form-group {
+      position: relative;
+    }
+    .form-group .invalid-feedback {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: red;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    .invalid-feedback-message {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- First Form -->
+    <div class="col-md-6">
+      <h2>First Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="firstName1">First Name</label>
+          <input type="text" class="form-control" id="firstName1" placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+          <label for="lastName1">Last Name</label>
+          <input type="text" class="form-control" id="lastName1" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group">
+          <label for="email1">Email</label>
+          <input type="email" class="form-control" id="email1" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="phone1">Phone Number</label>
+          <input type="text" class="form-control" id="phone1" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="address1">Address</label>
+          <input type="text" class="form-control" id="address1" placeholder="Enter Address">
+        </div>
+        <div class="form-group">
+          <label for="city1">City</label>
+          <input type="text" class="form-control" id="city1" placeholder="Enter City">
+        </div>
+        <div class="form-group">
+          <label for="state1">State</label>
+          <input type="text" class="form-control" id="state1" placeholder="Enter State">
+        </div>
+        <div class="form-group">
+          <label>Do you have a hosting question?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="hostingQuestion1" id="yes1" value="yes">
+            <label class="form-check-label" for="yes1">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="hostingQuestion1" id="no1" value="no">
+            <label class="form-check-label" for="no1">No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="projectDescription1">Project Description</label>
+          <textarea class="form-control" id="projectDescription1" rows="3" placeholder="Enter Project Description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+
+    <!-- Arrow -->
+    <div class="col-md-1 d-flex align-items-center justify-content-center">
+      <h1>&#8594;</h1>
+    </div>
+
+    <!-- Second Form -->
+    <div class="col-md-5">
+      <h2>Second Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="firstName2" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName2" placeholder="Enter First Name">
+          <div class="invalid-feedback-message">Please supply your first name</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        <div class="form-group">
+          <label for="lastName2" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName2" placeholder="Enter Last Name">
+          <div class="invalid-feedback-message">Please supply your last name</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        <div class="form-group">
+          <label for="email2" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email2" placeholder="Enter Email">
+          <div class="invalid-feedback-message">Please supply your email</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        <div class="form-group">
+          <label for="phone2" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone2" placeholder="Enter Phone Number">
+          <div class="invalid-feedback-message">Please supply your phone number</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        <div class="form-group">
+          <label for="address2" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address2" placeholder="Enter Address">
+          <div class="invalid-feedback-message">Please supply your address</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        <div class="form-group">
+          <label for="city2" class="form-label">City</label>
+          <input type="text" class="form-control" id="city2" placeholder="Enter City">
+          <div class="invalid-feedback-message">Please supply your city</div>
+          <div class="invalid-feedback">×</div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

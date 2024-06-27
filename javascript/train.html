@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+      .animate-spin {
+        animation: spin 7s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(100vw); }
+      }
+    </style>
+  </head>
+  <body class="flex flex-col items-center justify-center h-screen bg-white font-[times-new-roman]">
+    <div id="animation-container" class="flex justify-center">
+      <img id="train" src="https://1.bp.blogspot.com/-aegjChwfc8k/X5bL_aO_YcI/AAAAAAACrLA/OSfVO_rKk0cWYrs8zvfBn31YhMpMKDHzgCLcBGAsYHQ/s2048/Heber%2BValley%2BRailroad%2BEngine%2B300.%2BUtah.jpg" alt="Green steam train with black wheels and green smokestack. The train is animated with clouds in the sky." class="w-64 h-auto">
+    </div>
+    <p class="mt-4 text-xl font-bold text-blue-800">Click the following buttons to handle animation</p>
+    <div class="mt-4">
+      <button id="start-button" class="px-4 py-2 mr-2 text-sm font-semibold text-black bg-gray-200 border border-gray-300 rounded">Start</button>
+      <button id="stop-button" class="px-4 py-2 text-sm font-semibold text-black bg-gray-200 border border-gray-300 rounded">Stop</button>
+    </div>
+
+    <script>
+      document.getElementById('start-button').onclick = function() {
+        document.getElementById('train').classList.add('animate-spin');
+      };
+      document.getElementById('stop-button').onclick = function() {
+        document.getElementById('train').classList.remove('animate-spin');
+      };
+    </script>
+  </body>
+</html>
